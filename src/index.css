@@ -391,12 +391,11 @@ p { margin: 0; line-height: 1.7; }
    ═══════════════════════════════════════════════════════════ */
 
 .home-page { background: var(--maroon-deep); }
-
 .hero-slider {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: var(--maroon-deep);
+  background: var(--maroon);
 }
 
 .slide {
@@ -534,6 +533,22 @@ p { margin: 0; line-height: 1.7; }
   background: var(--gold);
   width: 28px;
   border-radius: 20px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SLIDE 1 — Maroon top band, image pushed down
+   ═══════════════════════════════════════════════════════════ */
+
+.slide.slide-maroon-top {
+  /* Push the whole slide down — leaves a maroon strip at the top */
+  top: 10px;
+  /* Fill the strip above with the exact brand maroon */
+  background: var(--maroon-dark);
+}
+
+/* The image inside slide 1 is anchored to the top of the visible area */
+.slide.slide-maroon-top .slide-image {
+  object-position: center top;
 }
 
 /* ═══════════════════════════════════════════════════════════

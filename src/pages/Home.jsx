@@ -4,7 +4,7 @@ import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 
 const slides = [
-  { image: '/images/mainimagerefined.webp', tagline: 'Transforming Learners into Achievers, Leaders & Agents of Change', duration: 9000, brandFont: true },
+  { image: '/images/mainimagerefined.webp', tagline: 'Transforming Learners into Achievers, Leaders & Agents of Change', duration: 9000, brandFont: true,maroonTop: true, },
 
   { image: '/images/classinsession.webp', tagline: 'We provide a child-friendly learning environment.', duration: 5000 },
   { image: '/images/classinsession2.webp', tagline: 'Learning session in progress', duration: 5000 },
@@ -91,10 +91,10 @@ function Home() {
               i === (current - 1 + slides.length) % slides.length
 
             return (
-              <div
-                key={i}
-                className={`slide${i === current ? ' active' : ''}`}
-              >
+           <div
+  key={i}
+  className={`slide${i === current ? ' active' : ''}${slide.maroonTop ? ' slide-maroon-top' : ''}`}
+>
                 {shouldRender && (
                   slide.collage ? (
                     <div className="slide-collage">
