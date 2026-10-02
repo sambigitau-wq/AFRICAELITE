@@ -19,17 +19,19 @@ function WhoWeAre() {
               transition={{ duration: 0.7 }}
             >
               <h1 className="who-heading">Who we are</h1>
+<p className="hero-lead-text">
+  We are a <em>Private Christian School</em> that prides in nurturing
+  learners into <span>holistic growth</span>. We run programs that
+  actively promote; academic competence, learners' self-awareness,
+  character development, intellectual growth and physical grooming
+  of our learners.
+</p>
 
-              <p className="hero-lead-text">
-                We are a <em>Private Christian School</em> that prides in
-                nurturing learners into <span>holistic growth</span>. We run
-                programs that actively promote; academic competence, learners'
-                self-awareness, character development, intellectual growth and
-                physical grooming of our learners. We nurture creativity,
-                resilience and excellence. We help every learner discover and
-                develop their talents. We pride in teaching, inspiring and
-                mentoring our learners.
-              </p>
+<p className="hero-lead-text">
+  We nurture creativity, resilience and excellence. We help every
+  learner discover and develop their talents. We pride in teaching,
+  inspiring and mentoring our learners.
+</p>
             </motion.div>
           </div>
 

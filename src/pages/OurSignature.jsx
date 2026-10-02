@@ -24,7 +24,6 @@ function OurSignature() {
 
         <section className="page-hero page-hero-split">
 
-          {/* Left Side: The Text */}
           <div className="page-hero-content">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -33,7 +32,7 @@ function OurSignature() {
             >
               <h1 className="who-heading">Our signature</h1>
 
-              <p className="hero-lead-text signature-intro">
+              <p className="signature-intro">
                 Our learners are known for:
               </p>
 
@@ -53,7 +52,6 @@ function OurSignature() {
             </motion.div>
           </div>
 
-          {/* Right Side: The Image */}
           <div className="page-hero-image">
             <img
               src="/images/mainimagerefined.webp"
@@ -61,7 +59,6 @@ function OurSignature() {
             />
           </div>
 
-          {/* Breadcrumb */}
           <div className="page-hero-breadcrumb">
             <div className="container">
               <span>Home</span>

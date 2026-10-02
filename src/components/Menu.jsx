@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu as MenuIcon, X } from 'lucide-react'
 
 const links = [
@@ -17,6 +17,11 @@ const links = [
 function Menu() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+
+  // Force the dark topbar on pages with a light background
+  const forceDarkTopbar =
+    location.pathname === '/previous-academics'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -36,8 +41,9 @@ function Menu() {
 
   return (
     <>
-      <header className={`topbar${scrolled ? ' scrolled' : ''}`}>
-        <div className="container topbar-inner">
+      <header className={`topbar${scrolled || forceDarkTopbar ? ' scrolled' : ''}`}>
+
+        <div className="topbar-inner">
 
           <Link to="/" className="topbar-brand" onClick={close}>
             <img
@@ -76,15 +82,17 @@ function Menu() {
           <X size={26} />
         </button>
 
-        <div className="side-menu-brand">
-          <img
-            src="/images/logo.webp"
-            alt="Africa Elite Schools"
-            className="side-menu-logo"
-          />
-          <strong>AFRICA ELITE SCHOOLS</strong>
-          <span>EXCELLENCE IS OUR IDENTITY</span>
-        </div>
+     <div className="side-menu-brand">
+  <img
+    src="/images/logo.webp"
+    alt="Africa Elite Schools"
+    className="side-menu-logo"
+  />
+  <div className="side-menu-brand-text">
+    <strong>AFRICA ELITE SCHOOLS</strong>
+    <span>EXCELLENCE IS OUR IDENTITY</span>
+  </div>
+</div>
 
         <ul className="side-menu-links">
           {links.map((link) => (

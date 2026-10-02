@@ -10,7 +10,7 @@ function Contact() {
 
       <main className="inner-page">
 
-        {/* Brookhurst-Style Hero: Full-width image with overlaid title + breadcrumb */}
+        {/* Hero — image + title */}
         <section className="gallery-hero">
           <div className="gallery-hero-image">
             <img src="/images/pp2grad.webp" alt="Contact Africa Elite Schools" />
@@ -24,13 +24,46 @@ function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                Contact
+                Contact us
               </motion.h1>
             </div>
           </div>
+        </section>
 
-          <div className="page-hero-breadcrumb">
-            <div className="container">
+        {/* Contact Details Strip */}
+        <section className="contact-details-strip">
+          <div className="container">
+            <div className="contact-strip-grid">
+
+              <div className="contact-strip-item">
+                <Phone size={18} />
+                <div>
+                  <span className="contact-strip-label">Call Us</span>
+                  <a href="tel:+254741666966">+254 0741 666 966</a>
+                  <a href="tel:+254701666966">+254 0701 666 966</a>
+                </div>
+              </div>
+
+              <div className="contact-strip-item">
+                <Mail size={18} />
+                <div>
+                  <span className="contact-strip-label">Email</span>
+                  <a href="mailto:info@africaelite.org">info@africaelite.org</a>
+                </div>
+              </div>
+
+              <div className="contact-strip-item">
+                <MapPin size={18} />
+                <div>
+                  <span className="contact-strip-label">Address</span>
+                  <p>P.O. Box 34138, 00100 Nairobi</p>
+                  <p>Maua, Meru</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="contact-strip-breadcrumb">
               <span>Home</span>
               <span className="sep">›</span>
               <span>Contact</span>
@@ -38,41 +71,7 @@ function Contact() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
-            <div className="contact-information">
-
-              <div className="contact-card">
-                <div className="contact-icon"><Phone size={21} /></div>
-                <div>
-                  <span>Call Us</span>
-                  <a href="tel:+254741666966">+254 0741 666 966</a>
-                  <a href="tel:+254701666966">+254 0701 666 966</a>
-                  <a href="tel:+254736666966">+254 0736 666 966</a>
-                </div>
-              </div>
-
-              <div className="contact-card">
-                <div className="contact-icon"><Mail size={21} /></div>
-                <div>
-                  <span>Email</span>
-                  <a href="mailto:info@africaelite.org">info@africaelite.org</a>
-                </div>
-              </div>
-
-              <div className="contact-card">
-                <div className="contact-icon"><MapPin size={21} /></div>
-                <div>
-                  <span>Address</span>
-                  <p>P.O. Box 34138, 00100 Nairobi</p>
-                  <p>Maua, Meru</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
+        {/* Form + Map */}
         <section className="section cream">
           <div className="container contact-lower-grid">
 
@@ -109,6 +108,7 @@ function Contact() {
           </div>
         </section>
 
+        {/* Final CTA */}
         <section className="contact-final-cta">
           <div className="container">
             <div className="final-cta-content">

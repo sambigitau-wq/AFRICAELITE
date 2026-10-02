@@ -63,50 +63,26 @@ function PreviousAcademics() {
 
       <main className="inner-page">
 
-        {/* Hero Title Section — Lazy Logo Strip */}
-        <section className="previous-academics-hero">
-          <div className="lazy-logo-strip" aria-hidden="true">
-            <img src="/images/logo.webp" alt="" />
-            <img src="/images/logo.webp" alt="" />
-            <img src="/images/logo.webp" alt="" />
-            <img src="/images/logo.webp" alt="" />
-            <img src="/images/logo.webp" alt="" />
-          </div>
-
+        <section className="section previous-academics-section">
           <div className="container">
-            <motion.h1
-              className="previous-academics-heading"
+
+            <motion.h2
+              className="content-heading center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
               Our previous academic performance
-            </motion.h1>
+            </motion.h2>
 
-            <motion.p
-              className="previous-academics-sub"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-            >
-              (When schools used to be rated)
-            </motion.p>
-          </div>
-
-          <div className="page-hero-breadcrumb">
-            <div className="container">
-              <span>Home</span>
-              <span className="sep">›</span>
-              <span>Our Academics</span>
-              <span className="sep">›</span>
-              <span>Previous Performance</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container">
-
+          <motion.p
+  className="previous-academics-lead"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.15 }}
+>
+  (When schools used to be rated)
+</motion.p>
             <div className="kcpe-card">
               <div className="kcpe-columns">
                 {results.map((r) => (
@@ -182,6 +158,7 @@ function PreviousAcademics() {
 
           </div>
         </section>
+
 
       </main>
 

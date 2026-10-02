@@ -101,9 +101,8 @@ function CoCurricular() {
           </div>
 
           <div className="page-hero-image">
-            <img src="/images/ballet.webp" alt="Co-Curricular Activities at Africa Elite Schools" />
-          </div>
-
+  <img src="/images/mainimagerefined.webp" alt="Africa Elite Schools" />
+</div>
           <div className="page-hero-breadcrumb">
             <div className="container">
               <span>Home</span>

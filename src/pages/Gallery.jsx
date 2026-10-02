@@ -1,106 +1,137 @@
-import { motion } from 'framer-motion'
+import { useState, useEffect, useCallback } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 
 const photos = [
-  // --- Original Gallery Items (Converted to WebP) ---
-  { title: 'Our Learners', caption: 'Excellence in every classroom', image: '/images/mainimagerefined.webp' },
-  { title: 'Ballet Dance', caption: 'Grace, discipline, and poise', image: '/images/ballet.webp' },
-  { title: 'Music Performance', caption: 'Discovering musical talent', image: '/images/harp.webp' },
-  { title: 'Chess Club', caption: 'Strategy and concentration', image: '/images/chess.webp' },
-  { title: 'Swimming', caption: 'Building strength in the pool', image: '/images/swimming.webp' },
-  { title: 'Taekwondo', caption: 'Discipline and self-defence', image: '/images/taekwondo.webp' },
-  { title: 'Museum Visit', caption: 'Learning beyond the classroom', image: '/images/museumvisit.webp' },
-  { title: 'School Performance', caption: 'Confidence on the stage', image: '/images/performance.webp' },
-  { title: 'PP2 Graduation', caption: 'Celebrating early milestones', image: '/images/pp2grad.webp' },
-  { title: 'Mentorship Session', caption: 'Guiding every learner', image: '/images/mentorship.webp' },
-  { title: 'Kindergarten Presentation', caption: 'Little voices, big moments', image: '/images/kindergatenpresentation.webp' },
-
-  // --- Brand New Additions From Your Optimized Images ---
-  { title: 'Class in Session', caption: 'Interactive and engaging learning spaces', image: '/images/classinsession.webp' },
-  { title: 'Computer Lab Labs', caption: 'Developing technical and digital mastery', image: '/images/computerclassinsession.webp' },
-  { title: 'Tech Innovation', caption: 'Problem solving through practical technology', image: '/images/computerclassinsession2.webp' },
-  { title: 'Focus & Precision', caption: 'Building concentration skills through sports', image: '/images/dart.webp' },
-  { title: 'Confident Speakers', caption: 'Articulating thoughts clearly and confidently', image: '/images/studentsconfidentlypresenting.webp' },
-  { title: 'Peer Interactions', caption: 'Developing healthy social and teamwork skills', image: '/images/studentsinteracting.webp' },
-  { title: 'Presidential Address', caption: 'Inspirational guidance for our learners', image: '/images/presidentaddressingtheschool.webp' },
-  { title: 'Ballet Presentation', caption: 'Creative expressions of art and movement', image: '/images/ballletpresentation.webp' },
-  { title: 'Cultural Heritage', caption: 'Celebrating rich diversity through performance', image: '/images/culturaldancepresentation.webp' },
-  { title: 'Orchestral Talents', caption: 'Harmonious training in woodwind and brass', image: '/images/studentsplayingtrumpets.webp' },
-  { title: 'Live Ensemble', caption: 'Bringing music theory to life on stage', image: '/images/performance2.webp' },
-  { title: 'School Features', caption: 'Documenting moments of pure excellence', image: '/images/Exposure3.webp' },
-  { title: 'Trumpets', caption: 'Nurturing focused instrumental expertise', image: '/images/HARPSINGLESTUDENT.webp' },
-  { title: 'Music Room Work', caption: 'Unlocking individual rhythm and cadence', image: '/images/musiclassongoing.webp' },
-  { title: 'Runway Pageant', caption: 'Cultivating strong personal self-esteem', image: '/images/fashionshow.webp' },
-  { title: 'Elite Grooming', caption: 'Instilling daily pride and neatness habits', image: '/images/grooming.webp' },
-  { title: 'Polished Standards', caption: 'Character building through daily routines', image: '/images/grooming2.webp' },
-  { title: 'Mount Kenya Expedition', caption: 'Adventure and character building outside the classroom', image: '/images/exposuretomountkenya.webp' },
-  { title: 'Old Moses Camp Expedition', caption: 'Resilience, teamwork, and outdoor exploration', image: '/images/learnersatoldmosescamp.webp' },
-  { title: 'Elite Student Profile', caption: 'Shaping the next generation of global citizens', image: '/images/student.webp' },
-  { title: 'Early Years Foundations', caption: 'Nurturing curiosity from the very beginning', image: '/images/pp2.webp' },
-  { title: 'Pre-Primary Learners', caption: 'Safe, interactive learning environments', image: '/images/PP2INSESSION.webp' },
-  { title: 'Graduation Milestones', caption: 'The pride of academic advancement', image: '/images/pp2grad.webp' },
-  { title: 'Celebrating Achievements', caption: 'Honoring steps taken towards big futures', image: '/images/pp2graduation2.webp' },
-  { title: 'Music Festival Honors', caption: 'Recognized for national level artistic brilliance', image: '/images/israelinamusicfestivalaward.webp' }
+  { image: '/images/mainimagerefined.webp', caption: 'Our Learners — Excellence in every classroom' },
+  { image: '/images/ballet.webp', caption: 'Ballet Dance — Grace, discipline, and poise' },
+  { image: '/images/harp.webp', caption: 'Music Performance — Discovering musical talent' },
+  { image: '/images/chess.webp', caption: 'Chess Club — Strategy and concentration' },
+  { image: '/images/swimming.webp', caption: 'Swimming — Building strength in the pool' },
+  { image: '/images/taekwondo.webp', caption: 'Taekwondo — Discipline and self-defence' },
+  { image: '/images/museumvisit.webp', caption: 'Museum Visit — Learning beyond the classroom' },
+  { image: '/images/performance.webp', caption: 'School Performance — Confidence on the stage' },
+  { image: '/images/pp2grad.webp', caption: 'PP2 Graduation — Celebrating early milestones' },
+  { image: '/images/mentorship.webp', caption: 'Mentorship Session — Guiding every learner' },
+  { image: '/images/kindergatenpresentation.webp', caption: 'Kindergarten Presentation — Little voices, big moments' },
+  { image: '/images/classinsession.webp', caption: 'Class in Session — Interactive and engaging learning spaces' },
+  { image: '/images/computerclassinsession.webp', caption: 'Computer Lab — Developing technical and digital mastery' },
+  { image: '/images/computerclassinsession2.webp', caption: 'Tech Innovation — Problem solving through practical technology' },
+  { image: '/images/dart.webp', caption: 'Focus & Precision — Building concentration skills through sports' },
+  { image: '/images/studentsconfidentlypresenting.webp', caption: 'Confident Speakers — Articulating thoughts clearly and confidently' },
+  { image: '/images/studentsinteracting.webp', caption: 'Peer Interactions — Developing healthy social and teamwork skills' },
+  { image: '/images/presidentaddressingtheschool.webp', caption: 'Presidential Address — Inspirational guidance for our learners' },
+  { image: '/images/ballletpresentation.webp', caption: 'Ballet Presentation — Creative expressions of art and movement' },
+  { image: '/images/culturaldancepresentation.webp', caption: 'Cultural Heritage — Celebrating rich diversity through performance' },
+  { image: '/images/studentsplayingtrumpets.webp', caption: 'Orchestral Talents — Harmonious training in woodwind and brass' },
+  { image: '/images/performance2.webp', caption: 'Live Ensemble — Bringing music theory to life on stage' },
+  { image: '/images/Exposure3.webp', caption: 'School Features — Documenting moments of pure excellence' },
+  { image: '/images/HARPSINGLESTUDENT.webp', caption: 'Trumpets — Nurturing focused instrumental expertise' },
+  { image: '/images/musiclassongoing.webp', caption: 'Music Room Work — Unlocking individual rhythm and cadence' },
+  { image: '/images/fashionshow.webp', caption: 'Runway Pageant — Cultivating strong personal self-esteem' },
+  { image: '/images/grooming.webp', caption: 'Elite Grooming — Instilling daily pride and neatness habits' },
+  { image: '/images/grooming2.webp', caption: 'Polished Standards — Character building through daily routines' },
+  { image: '/images/exposuretomountkenya.webp', caption: 'Mount Kenya Expedition — Adventure and character building outside the classroom' },
+  { image: '/images/learnersatoldmosescamp.webp', caption: 'Old Moses Camp Expedition — Resilience, teamwork, and outdoor exploration' },
+  { image: '/images/student.webp', caption: 'Elite Student Profile — Shaping the next generation of global citizens' },
+  { image: '/images/pp2.webp', caption: 'Early Years Foundations — Nurturing curiosity from the very beginning' },
+  { image: '/images/PP2INSESSION.webp', caption: 'Pre-Primary Learners — Safe, interactive learning environments' },
+  { image: '/images/pp2graduation2.webp', caption: 'Graduation Milestones — The pride of academic advancement' },
+  { image: '/images/israelinamusicfestivalaward.webp', caption: 'Music Festival Honors — Recognized for national level artistic brilliance' },
 ]
 
 function Gallery() {
+  const [current, setCurrent] = useState(0)
+  const [paused, setPaused] = useState(false)
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % photos.length)
+  }, [])
+
+  const prev = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + photos.length) % photos.length)
+  }, [])
+
+  useEffect(() => {
+    if (paused) return
+    const id = setTimeout(next, 5000)
+    return () => clearTimeout(id)
+  }, [current, paused, next])
+
   return (
     <>
       <Menu />
 
       <main className="inner-page">
 
-        {/* Brookhurst-Style Hero: Full-width image with overlaid title + breadcrumb */}
-        <section className="gallery-hero">
-          <div className="gallery-hero-image">
-            <img src="/images/mainimagerefined.webp" alt="Gallery of Africa Elite Schools" />
-          </div>
+        <section className="gallery-slider">
+          {photos.map((photo, i) => {
+            const shouldRenderImage =
+              i === current ||
+              i === (current + 1) % photos.length ||
+              i === (current - 1 + photos.length) % photos.length
 
-          <div className="gallery-hero-content">
-            <div className="container">
-              <motion.h1
-                className="gallery-hero-title"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
+            return (
+              <div
+                key={i}
+                className={`gallery-slide${i === current ? ' active' : ''}`}
               >
-                Gallery
-              </motion.h1>
-            </div>
-          </div>
+                {shouldRenderImage && (
+                  <img
+                    src={photo.image}
+                    alt=""
+                    className="gallery-slide-image"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                  />
+                )}
+                <div className="gallery-slide-overlay" />
+              </div>
+            )
+          })}
 
-          <div className="page-hero-breadcrumb">
-            <div className="container">
-              <span>Home</span>
-              <span className="sep">›</span>
-              <span>Gallery</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Masonry Gallery */}
-        <section className="section">
-          <div className="container">
-            <div className="gallery-masonry">
-              {photos.map((p, i) => (
-                <motion.figure
-                  key={p.title + i}
-                  className="gallery-photo"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (i % 4) * 0.08 }}
+          <div className="gallery-slider-content">
+            <div className="gallery-caption-wrap">
+              {photos.map((photo, i) => (
+                <p
+                  key={i}
+                  className={`gallery-slide-caption${i === current ? ' active' : ''}`}
                 >
-                  <img src={p.image} alt={p.title} />
-                  <div className="gallery-photo-overlay" />
-                  <figcaption className="gallery-caption">
-                    <strong>{p.title}</strong>
-                    <span>{p.caption}</span>
-                  </figcaption>
-                </motion.figure>
+                  {photo.caption}
+                </p>
               ))}
             </div>
+          </div>
+
+          <button
+            className="gallery-arrow gallery-arrow-left"
+            onClick={prev}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            aria-label="Previous photo"
+          >
+            <ChevronLeft size={40} />
+          </button>
+
+          <button
+            className="gallery-arrow gallery-arrow-right"
+            onClick={next}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            aria-label="Next photo"
+          >
+            <ChevronRight size={40} />
+          </button>
+
+          <div className="gallery-dots">
+            {photos.map((_, i) => (
+              <button
+                key={i}
+                className={`gallery-dot${i === current ? ' active' : ''}`}
+                onClick={() => setCurrent(i)}
+                aria-label={`Go to photo ${i + 1}`}
+              />
+            ))}
           </div>
         </section>
 

@@ -66,7 +66,7 @@ function Academics() {
 
           {/* Right Side: The Image */}
           <div className="page-hero-image">
-            <img src="/images/kindergatenpresentation.webp" alt="Academics at Africa Elite Schools" />
+            <img src="/images/mainimagerefined.webp" alt="Academics at Africa Elite Schools" />
           </div>
 
           {/* Breadcrumb */}
