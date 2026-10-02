@@ -63,11 +63,7 @@ function Contact() {
 
             </div>
 
-            <div className="contact-strip-breadcrumb">
-              <span>Home</span>
-              <span className="sep">›</span>
-              <span>Contact</span>
-            </div>
+     
           </div>
         </section>
 

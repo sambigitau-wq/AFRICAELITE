@@ -1252,13 +1252,11 @@ p { margin: 0; line-height: 1.7; }
   z-index: 3;
 }
 
-/* ─── Gallery slider ─── */
-
 .gallery-slider {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: var(--maroon-deep);
+  background: var(--maroon);
 }
 
 .gallery-slide {
@@ -1284,7 +1282,6 @@ p { margin: 0; line-height: 1.7; }
   background: transparent;
   pointer-events: none;
 }
-
 .gallery-slider-content {
   position: absolute;
   bottom: 90px;
@@ -1293,8 +1290,8 @@ p { margin: 0; line-height: 1.7; }
   z-index: 3;
   padding: 0 60px;
   pointer-events: none;
+  text-align: left !important;   /* ← ADD THIS */
 }
-
 .gallery-caption-wrap {
   position: relative;
   width: 100%;
@@ -1302,7 +1299,6 @@ p { margin: 0; line-height: 1.7; }
   margin: 0 auto;
   min-height: 80px;
 }
-
 .gallery-slide-caption {
   position: absolute;
   left: 0;
@@ -1313,19 +1309,15 @@ p { margin: 0; line-height: 1.7; }
   transform: translateY(15px);
   transition: opacity 0.9s ease, transform 0.9s ease;
   font-family: 'DM Sans', sans-serif;
-  /* MUCH BIGGER font */
   font-size: clamp(2.2rem, 3.4vw, 3.2rem);
   line-height: 1.25;
   letter-spacing: -0.01em;
   font-weight: 700;
   color: #fff;
-  text-align: left;
-  text-shadow:
-    0 2px 12px rgba(0, 0, 0, 1),
-    0 4px 28px rgba(0, 0, 0, 0.85);
+  text-align: left !important;
   pointer-events: none;
+  /* text-shadow removed */
 }
-
 .gallery-slide-caption.active {
   opacity: 1;
   transform: translateY(0);
@@ -1456,7 +1448,18 @@ p { margin: 0; line-height: 1.7; }
   grid-row: span 2;
   aspect-ratio: auto;
 }
+/* ═══════════════════════════════════════════════════════════
+   GALLERY SLIDE 1 — Maroon top strip, image pushed down
+   ═══════════════════════════════════════════════════════════ */
 
+.gallery-slide.gallery-slide-maroon-top {
+  top: 80px;
+  background: var(--maroon);
+}
+
+.gallery-slide.gallery-slide-maroon-top .gallery-slide-image {
+  object-position: center 25%;
+}
 /* ═══════════════════════════════════════════════════════════
    CONTACT
    ═══════════════════════════════════════════════════════════ */
