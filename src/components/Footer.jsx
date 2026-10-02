@@ -10,19 +10,16 @@ function Footer() {
 
         <div className="footer-grid">
 
-          <div className="footer-brand">
-            <img
-              src="/images/logo.webp"
-              alt="Africa Elite Schools"
-              className="footer-logo"
-            />
-            <strong>AFRICA ELITE SCHOOLS</strong>
-            <span className="footer-tagline">Excellence is Our Identity</span>
-            <p>
-              A Private Christian School that prides in nurturing
-              learners into holistic growth.
-            </p>
-          </div>
+        <div className="footer-brand">
+  <div className="footer-brand-top">
+    <img src="/images/logo.webp" alt="" className="footer-logo" />
+    <div className="footer-brand-text">
+      <strong>AFRICA ELITE SCHOOLS</strong>
+      <span className="footer-tagline">EXCELLENCE IS OUR IDENTITY</span>
+    </div>
+  </div>
+ 
+</div>
 
           <div className="footer-column">
             <h4>Quick Links</h4>

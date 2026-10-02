@@ -662,27 +662,22 @@ p { margin: 0; line-height: 1.7; }
 }
 
 .page-hero-split .page-hero-content {
-  width: 58%;
+  width: 80%;
   display: flex;
   align-items: flex-start;
-  padding: 140px 7% 140px 8%;
+  padding: 150px 5% 120px 7%;
   background: var(--maroon-dark);
 }
-
 .page-hero-split .page-hero-image {
-  width: 42%;
+  width: 70%;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
 }
-
 .page-hero-split .page-hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 25%;
   display: block;
 }
 
@@ -879,14 +874,12 @@ p { margin: 0; line-height: 1.7; }
 
 .cocurricular-body p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  line-height: 1.65;
   color: rgba(250, 247, 241, 0.95);
-  margin: 0 0 22px 0;
-  text-align: justify;
-  text-justify: inter-word;
+  margin: 0 0 20px 0;
+  text-align: left;
 }
-
 .cocurricular-body p:last-child { margin-bottom: 0; }
 
 .cocurricular-body p strong {
@@ -1686,21 +1679,18 @@ p { margin: 0; line-height: 1.7; }
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(227, 199, 111, 0.18);
 }
-
-.footer-brand img.footer-logo {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-  margin-bottom: 20px;
-  background: #fbf6ec;
-  border-radius: 50%;
-  padding: 8px;
-  box-shadow:
-    0 3px 12px rgba(0, 0, 0, 0.35),
-    0 0 0 2px rgba(214, 168, 79, 0.65);
-  transition: transform 0.3s ease;
+.footer-brand strong {
+  display: block;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gold-light);
+  margin-bottom: 6px;
 }
-
 .footer-brand img.footer-logo:hover { transform: translateY(-3px); }
 
 .footer-brand strong {
@@ -1712,15 +1702,14 @@ p { margin: 0; line-height: 1.7; }
   letter-spacing: 0.02em;
   line-height: 1.2;
 }
-
 .footer-tagline {
   display: block;
-  margin-top: 8px;
   color: var(--gold-light);
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .footer-brand p {
@@ -2207,7 +2196,22 @@ p { margin: 0; line-height: 1.7; }
 
   .footer-brand img.footer-logo { width: 90px; height: 90px; padding: 6px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; padding-top: 22px; }
+/* Row wrapper — logo left, text right */
+.footer-brand-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
 
+/* Column wrapper — name above motto */
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
   .vchart { grid-template-columns: 46px 1fr; gap: 10px; padding: 20px 0 40px; }
   .vchart-axis { height: 280px; font-size: 0.62rem; }
   .vchart-bars { height: 280px; gap: 14px; padding: 0 8px; }
@@ -2257,4 +2261,92 @@ p { margin: 0; line-height: 1.7; }
   .hero-lead-text { font-size: 0.85rem; }
   .signature-list li { font-size: 0.95rem; }
   .signature-intro { font-size: 0.95rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER BRAND — Match the side menu layout
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-brand {
+  display: block !important;
+}
+
+.footer-brand-top {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-bottom: 20px !important;
+}
+
+.footer-brand img.footer-logo {
+  width: 90px !important;
+  height: 90px !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 6px !important;
+  background: #fbf6ec !important;
+  border-radius: 50% !important;
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.35),
+    0 0 0 2px rgba(214, 168, 79, 0.65) !important;
+}
+
+.footer-brand-text {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  min-width: 0 !important;
+}
+
+.footer-brand-text strong {
+  display: block !important;
+  color: #fff !important;
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.15 !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid var(--gold-light) !important;
+  margin-bottom: 6px !important;
+}
+
+.footer-brand-text .footer-tagline {
+  display: block !important;
+  color: var(--gold-light) !important;
+  font-size: 0.6rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+}
+
+.footer-brand p {
+  max-width: 340px !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.75 !important;
+}
+
+/* ─── Kill any pseudo-element that might be rendering a logo ─── */
+
+.footer-brand::before,
+.footer-brand::after,
+.site-footer::after {
+  display: none !important;
+}
+/* ═══════════════════════════════════════════════════════════
+   FOOTER BRAND — School name on one line
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-brand-text strong {
+  white-space: nowrap !important;
+  font-size: 1.1rem !important;
+}
+
+/* Widen the footer brand column so the name fits */
+.footer-grid {
+  grid-template-columns: 1.6fr 0.9fr 0.9fr 1.2fr !important;
 }
