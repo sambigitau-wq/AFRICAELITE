@@ -2422,3 +2422,47 @@ p { margin: 0; line-height: 1.7; }
     margin-bottom: 10px !important;
   }
 }
+/* ═══════════════════════════════════════════════════════════
+   MOBILE FIX — Home + Gallery slider images not cropped
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 700px) {
+  /* HOME SLIDER */
+  .slide {
+    top: 130px !important;
+  }
+
+  .slide-image {
+    object-fit: cover !important;
+    /* Focus on the top of the image — students' faces */
+    object-position: center 20% !important;
+  }
+
+  /* Slide 1 (maroon strip) */
+  .slide.slide-maroon-top {
+    top: 130px !important;
+  }
+
+  .slide.slide-maroon-top .slide-image {
+    object-position: center 15% !important;
+  }
+
+  /* GALLERY SLIDER */
+  .gallery-slide {
+    top: 130px !important;
+  }
+
+  .gallery-slide-image {
+    object-fit: cover !important;
+    object-position: center 20% !important;
+  }
+
+  /* Gallery slide 1 (maroon strip) */
+  .gallery-slide.gallery-slide-maroon-top {
+    top: 130px !important;
+  }
+
+  .gallery-slide.gallery-slide-maroon-top .gallery-slide-image {
+    object-position: center 15% !important;
+  }
+}
