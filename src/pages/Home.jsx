@@ -27,7 +27,7 @@ const slides = [
 
   { image: '/images/musiclassongoing.webp', tagline: 'Music lesson in progress', duration: 5000 },
   { image: '/images/studentsplayingtrumpets.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
-  { image: '/images/HARPSINGLESTUDENT.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
+  { image: '/images/trumpets2.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
   { image: '/images/harp.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
   { image: '/images/ballet.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
   { image: '/images/ballletpresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
@@ -45,18 +45,7 @@ const slides = [
   { image: '/images/pp2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
   { image: '/images/pp2grad.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
   { image: '/images/pp2graduation2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
-
-  {
-    collage: [
-      '/images/israelinamusicfestivalaward.webp',
-      '/images/skating.webp',
-      '/images/studentmedal.webp',
-      '/images/studentplayingfootball.webp',
-      '/images/studentplayingfootball2.webp',
-    ],
-    tagline: 'We develop talents, nurture excellence',
-    duration: 8000,
-  },
+{ image: '/images/excellence.webp', tagline: 'We develop talents and nurture excellence ', duration: 5000 },
 ]
 
 function Home() {
