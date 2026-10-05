@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const photos = [
   { image: '/images/mainimagerefined.webp', caption: 'Our Learners — Excellence in every classroom', maroonTop: true },
   { image: '/images/ballet.webp', caption: 'Ballet Dance — Grace, discipline, and poise' },
-  { image: '/images/harp.webp', caption: 'Music Performance — Discovering musical talent' },
+
   { image: '/images/chess.webp', caption: 'Chess Club — Strategy and concentration' },
   { image: '/images/swimming.webp', caption: 'Swimming — Building strength in the pool' },
   { image: '/images/taekwondo.webp', caption: 'Taekwondo — Discipline and self-defence' },

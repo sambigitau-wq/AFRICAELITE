@@ -28,7 +28,7 @@ const slides = [
   { image: '/images/musiclassongoing.webp', tagline: 'Music lesson in progress', duration: 5000 },
   { image: '/images/studentsplayingtrumpets.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
   { image: '/images/trumpets2.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
-  { image: '/images/harp.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
+
   { image: '/images/ballet.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
   { image: '/images/ballletpresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
   { image: '/images/culturaldancepresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
