@@ -40,13 +40,17 @@ const Admission = () => {
   return (
     <div className="admission-page">
       <div className="admission-container">
-        <div className="admission-header">
-          <h1>AFRICA ELITE SCHOOLS</h1>
-          <p className="tagline">"Excellence Our Priority"</p>
-          <p>+254 (0)741 666 966 | +254 (0)701 666 966 | +254 (0)736 666 966</p>
-          <p>admin@africaelite.org</p>
-        </div>
-
+       <div className="admission-header">
+  <img
+    src="/images/logo.webp"
+    alt="Africa Elite Schools"
+    className="admission-logo"
+  />
+  <h1>AFRICA ELITE SCHOOLS</h1>
+  <p className="tagline">"Excellence Our Priority"</p>
+  <p>+254 (0)741 666 966 | +254 (0)701 666 966 | +254 (0)736 666 966</p>
+  <p>admin@africaelite.org</p>
+</div>
         <h2 className="admission-title">SCHOOL ADMISSION FORM</h2>
 
         <form ref={formRef} onSubmit={handleSubmit}>

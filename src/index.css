@@ -2721,3 +2721,26 @@ p { margin: 0; line-height: 1.7; }
   }
   .performance-caption { font-size: 0.72rem; }
 }
+/* ===== ADMISSION FORM LOGO ===== */
+.admission-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 14px;
+  padding: 6px;
+  background: #fbf6ec;
+  border-radius: 50%;
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.12),
+    0 0 0 2px rgba(26, 58, 107, 0.3);
+}
+
+@media (max-width: 700px) {
+  .admission-logo {
+    width: 70px;
+    height: 70px;
+    padding: 4px;
+    margin-bottom: 10px;
+  }
+}
