@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const photos = [
   { image: '/images/mainimagerefined.webp', caption: 'Excellence in every dimension', maroonTop: true },
 
-  { image: '/images/ballet.webp', caption: 'Creativity and authenticity take centre stage' },
+  { image: '/images/ballet.webp', caption: 'Champions are never made, they are born' },
 
   { image: '/images/chess.webp', caption: 'We are passionate about excellence' },
   { image: '/images/swimming.webp', caption: 'Moments of fun, fitness and freedom in the water' },
