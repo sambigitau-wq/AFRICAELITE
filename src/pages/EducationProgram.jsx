@@ -38,7 +38,7 @@ function EducationProgram() {
           </div>
 
           <div className="page-hero-image">
-            <img src="/images/mainimagerefined.webp" alt="Africa Elite Schools" />
+            <img src="/images/academicprogram.webp" alt="Africa Elite Schools" />
           </div>
 
           <div className="page-hero-breadcrumb">
