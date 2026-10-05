@@ -10,10 +10,10 @@ import PreviousAcademics from './pages/PreviousAcademics'
 import CoCurricular from './pages/CoCurricular'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import Admission from './pages/Admission'        // ✅ NEW LINE 1
 
 function App() {
   useEffect(() => {
-    // List of core images used as main headers on your inner sub-pages
     const criticalInnerPagesImages = [
       '/images/mainimagerefined.webp',       
       '/images/chess.webp',                  
@@ -22,7 +22,6 @@ function App() {
       '/images/pp2grad.webp',             
       '/images/logo.webp'                   
     ]
-
 
     criticalInnerPagesImages.forEach((imageSrc) => {
       const img = new Image()
@@ -42,6 +41,7 @@ function App() {
         <Route path="/co-curricular" element={<CoCurricular />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admission" element={<Admission />} />   {/* ✅ NEW LINE 2 */}
       </Routes>
     </BrowserRouter>
   )

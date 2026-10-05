@@ -11,6 +11,7 @@ const links = [
   { to: '/previous-academics', label: 'Our Previous Academics' },
   { to: '/co-curricular', label: 'Co-Curricular Activities' },
   { to: '/gallery', label: 'Gallery' },
+  { to: '/admission', label: 'Admission' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -20,8 +21,7 @@ function Menu() {
   const location = useLocation()
 
   // Force the dark topbar on pages with a light background
-  const forceDarkTopbar =
-    location.pathname === '/previous-academics'
+  const forceDarkTopbar = location.pathname === '/previous-academics'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -42,9 +42,7 @@ function Menu() {
   return (
     <>
       <header className={`topbar${scrolled || forceDarkTopbar ? ' scrolled' : ''}`}>
-
         <div className="topbar-inner">
-
           <Link to="/" className="topbar-brand" onClick={close}>
             <img
               src="/images/logo.webp"
@@ -57,6 +55,11 @@ function Menu() {
             </div>
           </Link>
 
+          {/* Apply Now CTA button */}
+          <Link to="/admission" className="topbar-cta" onClick={close}>
+            Apply Now
+          </Link>
+
           <button
             className="topbar-toggle"
             onClick={() => setOpen(true)}
@@ -64,7 +67,6 @@ function Menu() {
           >
             <MenuIcon size={24} />
           </button>
-
         </div>
       </header>
 
@@ -82,17 +84,17 @@ function Menu() {
           <X size={26} />
         </button>
 
-     <div className="side-menu-brand">
-  <img
-    src="/images/logo.webp"
-    alt="Africa Elite Schools"
-    className="side-menu-logo"
-  />
-  <div className="side-menu-brand-text">
-    <strong>AFRICA ELITE SCHOOLS</strong>
-    <span>EXCELLENCE IS OUR IDENTITY</span>
-  </div>
-</div>
+        <div className="side-menu-brand">
+          <img
+            src="/images/logo.webp"
+            alt="Africa Elite Schools"
+            className="side-menu-logo"
+          />
+          <div className="side-menu-brand-text">
+            <strong>AFRICA ELITE SCHOOLS</strong>
+            <span>EXCELLENCE IS OUR IDENTITY</span>
+          </div>
+        </div>
 
         <ul className="side-menu-links">
           {links.map((link) => (

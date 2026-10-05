@@ -2508,3 +2508,175 @@ p { margin: 0; line-height: 1.7; }
 }
 
 
+/* ===== ADMISSION FORM STYLES ===== */
+.admission-page {
+  background: #f4f6f8;
+  padding: 40px 15px;
+  min-height: 100vh;
+}
+
+.admission-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.admission-header {
+  text-align: center;
+  border-bottom: 3px double #1a3a6b;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.admission-header h1 {
+  color: #1a3a6b;
+  margin: 0 0 8px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.admission-header p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.admission-header .tagline {
+  font-style: italic;
+  color: #1a3a6b;
+  font-weight: bold;
+}
+
+.admission-title {
+  text-align: center;
+  color: #1a3a6b;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.section-heading {
+  font-size: 17px;
+  color: #1a3a6b;
+  border-bottom: 1px solid #ccd4e0;
+  padding-bottom: 6px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.admission-container .row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.admission-container .field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.admission-container label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.admission-container input[type="text"],
+.admission-container input[type="email"],
+.admission-container input[type="tel"],
+.admission-container input[type="date"],
+.admission-container select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #bbc4d1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fbfcfe;
+}
+
+.admission-container input:focus,
+.admission-container select:focus {
+  outline: none;
+  border-color: #1a3a6b;
+  background: #fff;
+}
+
+.declaration-box {
+  background: #f0f4fa;
+  padding: 15px 20px;
+  border-left: 4px solid #1a3a6b;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.agreement {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.agreement input {
+  width: auto !important;
+}
+
+.submit-btn {
+  background: #1a3a6b;
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover { background: #0f2748; }
+.submit-btn:disabled { background: #7a8aa0; cursor: not-allowed; }
+
+.status-box {
+  margin-top: 15px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.status-box.success { background: #e0f4e5; color: #1a7a3c; }
+.status-box.error   { background: #fbe3e3; color: #b02020; }
+
+@media (max-width: 700px) {
+  .admission-container { padding: 25px 18px; }
+  .admission-header h1 { font-size: 20px; }
+}
+
+/* ===== APPLY NOW TOPBAR BUTTON ===== */
+.topbar-cta {
+  background: #1a3a6b;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  margin-left: auto;
+  margin-right: 12px;
+  white-space: nowrap;
+}
+
+.topbar-cta:hover {
+  background: #0f2748;
+}
+
