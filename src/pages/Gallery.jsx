@@ -17,7 +17,7 @@ const photos = [
   { image: '/images/kindergatenpresentation.webp', caption: 'Kindergarten Presentation — Little voices, big moments' },
   { image: '/images/classinsession.webp', caption: 'Class in Session — Interactive and engaging learning spaces' },
   { image: '/images/computerclassinsession.webp', caption: 'Computer Lab — Developing technical and digital mastery' },
-  { image: '/images/computerclassinsession2.webp', caption: 'Tech Innovation — Problem solving through practical technology' },
+  { image: '/images/computerclassinsession3.webp', caption: 'Tech Innovation — Problem solving through practical technology' },
   { image: '/images/dart.webp', caption: 'Focus & Precision — Building concentration skills through sports' },
   { image: '/images/studentsconfidentlypresenting.webp', caption: 'Confident Speakers — Articulating thoughts clearly and confidently' },
   { image: '/images/studentsinteracting.webp', caption: 'Peer Interactions — Developing healthy social and teamwork skills' },

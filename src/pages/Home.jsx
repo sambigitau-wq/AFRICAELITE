@@ -7,7 +7,7 @@ const slides = [
   { image: '/images/mainimagerefined.webp', tagline: 'Transforming Learners into Achievers, Leaders & Agents of Change', duration: 9000, brandFont: true, maroonTop: true },
 
   { image: '/images/classinsession.webp', tagline: 'We provide a child-friendly learning environment.', duration: 5000 },
-  { image: '/images/classinsession2.webp', tagline: 'Learning session in progress', duration: 5000 },
+  { image: '/images/classinsession3.webp', tagline: 'Learning session in progress', duration: 5000 },
   { image: '/images/computerclassinsession.webp', tagline: 'We empower our learners with digital knowledge', duration: 5000 },
   { image: '/images/computerclassinsession2.webp', tagline: 'We empower our learners with digital knowledge', duration: 5000 },
   { image: '/images/kindergatenpresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
