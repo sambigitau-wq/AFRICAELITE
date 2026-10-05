@@ -18,7 +18,7 @@ const photos = [
   { image: '/images/kindergatenpresentation.webp', caption: 'Where creativity and authenticity are nurtured' },
   { image: '/images/classinsession.webp', caption: 'A child-friendly environment for joyful learning' },
   { image: '/images/computerclassinsession.webp', caption: 'Empowering learners with digital knowledge' },
-  { image: '/images/computerclassinsession3.webp', caption: 'Hands-on technology for tomorrow’s innovators' },
+  { image: '/images/computerclassinsession2.webp', caption: 'Hands-on technology for tomorrow’s innovators' },
   { image: '/images/dart.webp', caption: 'Fostering concentration, articulation and focus' },
   { image: '/images/studentsconfidentlypresenting.webp', caption: 'Courage, self-confidence and public speaking in action' },
   { image: '/images/studentsinteracting.webp', caption: 'Grooming learners into well-rounded individuals' },
