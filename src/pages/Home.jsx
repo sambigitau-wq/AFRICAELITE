@@ -4,7 +4,7 @@ import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 
 const slides = [
-  { image: '/images/mainimagerefined.webp', tagline: 'Transforming Learners into Achievers, Leaders & Agents of Change', duration: 9000, brandFont: true,maroonTop: true, },
+  { image: '/images/mainimagerefined.webp', tagline: 'Transforming Learners into Achievers, Leaders & Agents of Change', duration: 9000, brandFont: true, maroonTop: true },
 
   { image: '/images/classinsession.webp', tagline: 'We provide a child-friendly learning environment.', duration: 5000 },
   { image: '/images/classinsession2.webp', tagline: 'Learning session in progress', duration: 5000 },
@@ -14,7 +14,7 @@ const slides = [
   { image: '/images/learnerspresenting.webp', tagline: "Learners' presentation in progress", duration: 5000 },
   { image: '/images/learnerspresenting2.webp', tagline: "Learners' presentation in progress", duration: 5000 },
   { image: '/images/studentsconfidentlypresenting.webp', tagline: 'We nurture courage, self-confidence and public speaking skills', duration: 5000 },
-  { image: '/images/mentorship.webp', tagline: 'Guiding and counselling session in progress', duration: 5000 },
+  { image: '/images/mentorship.webp', tagline: 'Guiding and counselling session in progress', duration: 5000, contain: true },
   { image: '/images/presidentaddressingtheschool.webp', tagline: 'We develop public speaking skills', duration: 5000 },
 
   { image: '/images/chess.webp', tagline: 'We empower our learners with sharp critical and problem-solving skills', duration: 5000 },
@@ -45,7 +45,7 @@ const slides = [
   { image: '/images/pp2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
   { image: '/images/pp2grad.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
   { image: '/images/pp2graduation2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
-{ image: '/images/excellence.webp', tagline: 'We develop talents and nurture excellence ', duration: 5000 },
+  { image: '/images/excellence.webp', tagline: 'We develop talents and nurture excellence ', duration: 5000 },
 ]
 
 function Home() {
@@ -80,10 +80,10 @@ function Home() {
               i === (current - 1 + slides.length) % slides.length
 
             return (
-           <div
-  key={i}
-  className={`slide${i === current ? ' active' : ''}${slide.maroonTop ? ' slide-maroon-top' : ''}`}
->
+              <div
+                key={i}
+                className={`slide${i === current ? ' active' : ''}${slide.maroonTop ? ' slide-maroon-top' : ''}`}
+              >
                 {shouldRender && (
                   slide.collage ? (
                     <div className="slide-collage">
@@ -97,6 +97,23 @@ function Home() {
                         />
                       ))}
                     </div>
+                  ) : slide.contain ? (
+                    <>
+                      {/* Blurred backdrop — same image, scaled + blurred */}
+                      <img
+                        src={slide.image}
+                        alt=""
+                        className="slide-image-backdrop"
+                        aria-hidden="true"
+                      />
+                      {/* Sharp, fully-visible image on top */}
+                      <img
+                        src={slide.image}
+                        alt=""
+                        className="slide-image mentorship-full"
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                      />
+                    </>
                   ) : (
                     <img
                       src={slide.image}

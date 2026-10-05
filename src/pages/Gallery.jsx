@@ -4,7 +4,7 @@ import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 
 const photos = [
-    { image: '/images/mainimagerefined.webp', caption: 'Our Learners — Excellence in every classroom', maroonTop: true },
+  { image: '/images/mainimagerefined.webp', caption: 'Our Learners — Excellence in every classroom', maroonTop: true },
   { image: '/images/ballet.webp', caption: 'Ballet Dance — Grace, discipline, and poise' },
   { image: '/images/harp.webp', caption: 'Music Performance — Discovering musical talent' },
   { image: '/images/chess.webp', caption: 'Chess Club — Strategy and concentration' },
@@ -13,7 +13,7 @@ const photos = [
   { image: '/images/museumvisit.webp', caption: 'Museum Visit — Learning beyond the classroom' },
   { image: '/images/performance.webp', caption: 'School Performance — Confidence on the stage' },
   { image: '/images/pp2grad.webp', caption: 'PP2 Graduation — Celebrating early milestones' },
-  { image: '/images/mentorship.webp', caption: 'Mentorship Session — Guiding every learner' },
+  { image: '/images/mentorship.webp', caption: 'Mentorship Session — Guiding every learner', contain: true },
   { image: '/images/kindergatenpresentation.webp', caption: 'Kindergarten Presentation — Little voices, big moments' },
   { image: '/images/classinsession.webp', caption: 'Class in Session — Interactive and engaging learning spaces' },
   { image: '/images/computerclassinsession.webp', caption: 'Computer Lab — Developing technical and digital mastery' },
@@ -27,7 +27,6 @@ const photos = [
   { image: '/images/studentsplayingtrumpets.webp', caption: 'Orchestral Talents — Harmonious training in woodwind and brass' },
   { image: '/images/performance2.webp', caption: 'Live Ensemble — Bringing music theory to life on stage' },
   { image: '/images/Exposure3.webp', caption: 'School Features — Documenting moments of pure excellence' },
-  { image: '/images/HARPSINGLESTUDENT.webp', caption: 'Trumpets — Nurturing focused instrumental expertise' },
   { image: '/images/musiclassongoing.webp', caption: 'Music Room Work — Unlocking individual rhythm and cadence' },
   { image: '/images/fashionshow.webp', caption: 'Runway Pageant — Cultivating strong personal self-esteem' },
   { image: '/images/grooming.webp', caption: 'Elite Grooming — Instilling daily pride and neatness habits' },
@@ -73,17 +72,36 @@ function Gallery() {
               i === (current - 1 + photos.length) % photos.length
 
             return (
-            <div
-  key={i}
-  className={`gallery-slide${i === current ? ' active' : ''}${photo.maroonTop ? ' gallery-slide-maroon-top' : ''}`}
->
+              <div
+                key={i}
+                className={`gallery-slide${i === current ? ' active' : ''}${photo.maroonTop ? ' gallery-slide-maroon-top' : ''}`}
+              >
                 {shouldRenderImage && (
-                  <img
-                    src={photo.image}
-                    alt=""
-                    className="gallery-slide-image"
-                    loading={i === 0 ? 'eager' : 'lazy'}
-                  />
+                  photo.contain ? (
+                    <>
+                      {/* Blurred backdrop — same image, scaled + blurred */}
+                      <img
+                        src={photo.image}
+                        alt=""
+                        className="gallery-slide-image-backdrop"
+                        aria-hidden="true"
+                      />
+                      {/* Sharp, fully-visible image on top */}
+                      <img
+                        src={photo.image}
+                        alt=""
+                        className="gallery-slide-image mentorship-full"
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                      />
+                    </>
+                  ) : (
+                    <img
+                      src={photo.image}
+                      alt=""
+                      className="gallery-slide-image"
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                    />
+                  )
                 )}
                 <div className="gallery-slide-overlay" />
               </div>

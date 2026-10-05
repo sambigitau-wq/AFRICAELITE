@@ -406,16 +406,13 @@ p { margin: 0; line-height: 1.7; }
 }
 
 .slide.active { opacity: 1; }
-
 .slide-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Pushes students down so faces sit below the topbar text */
-  object-position: center 20%;
+  object-position: center top;
   display: block;
 }
-
 .slide-overlay {
   position: absolute;
   inset: 0;
@@ -1260,15 +1257,13 @@ p { margin: 0; line-height: 1.7; }
 }
 
 .gallery-slide.active { opacity: 1; }
-
 .gallery-slide-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center top;
   display: block;
 }
-
 .gallery-slide-overlay {
   position: absolute;
   inset: 0;
@@ -2475,3 +2470,41 @@ p { margin: 0; line-height: 1.7; }
     object-position: center 10% !important;
   }
 }
+.slide-image-backdrop,
+.gallery-slide-image-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(40px) brightness(0.55) saturate(1.2);
+  transform: scale(1.15);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide-image.mentorship-full,
+.gallery-slide-image.mentorship-full {
+  position: relative;
+  z-index: 1;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 700px) {
+  .slide-image-backdrop,
+  .gallery-slide-image-backdrop {
+    filter: blur(30px) brightness(0.5) saturate(1.2);
+  }
+
+  .slide-image.mentorship-full,
+  .gallery-slide-image.mentorship-full {
+    object-fit: contain !important;
+  }
+}
+
+
