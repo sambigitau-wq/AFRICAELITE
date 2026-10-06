@@ -6,9 +6,7 @@ import Footer from '../components/Footer'
 const indoor = [
   { label: 'Chess', image: '/images/chess.webp' },
   { label: 'Darts', image: '/images/dart.webp' },
-  { label: 'Draughts', image: '/images/chess.webp' },
-  { label: "Rubik's & magic cubes", image: '/images/chess.webp' },
-  { label: 'Word puzzles', image: '/images/chess.webp' },
+  
 ]
 
 const outdoor = [
@@ -18,10 +16,9 @@ const outdoor = [
 ]
 
 const clubs = [
-  { label: 'Debate', image: '/images/mentorship.webp' },
-  { label: 'Reading', image: '/images/img.webp' },
-  { label: 'Dancing', image: '/images/ballet.webp' },
-  { label: 'Music instruments', image: '/images/harp.webp' },
+
+  { label: 'Ballet', image: '/images/ballet.webp' },
+  { label: 'Music ', image: '/images/harp.webp' },
 ]
 
 const achievements = [
@@ -50,7 +47,7 @@ function CoCurricular() {
     <>
       <Menu />
 
-      <main className="inner-page">
+<main className="inner-page cocurricular-page">
 
         <section className="page-hero page-hero-split">
           <div className="page-hero-content">
@@ -101,7 +98,7 @@ function CoCurricular() {
           </div>
 
           <div className="page-hero-image">
-  <img src="/images/mainimagerefined.webp" alt="Africa Elite Schools" />
+  <img src="/images/cocurricular.webp" alt="Africa Elite Schools" />
 </div>
           <div className="page-hero-breadcrumb">
             <div className="container">

@@ -422,7 +422,7 @@ p { margin: 0; line-height: 1.7; }
 
 .hero-slider-content {
   position: absolute;
-  bottom: 90px;
+  bottom: 40px;
   left: 0;
   right: 0;
   z-index: 3;
@@ -652,7 +652,7 @@ p { margin: 0; line-height: 1.7; }
   background: var(--maroon-dark);
 }
 .page-hero-split .page-hero-image {
-  width: 70%;
+  width: 75%;
   position: relative;
   overflow: hidden;
 }
@@ -2743,4 +2743,8 @@ p { margin: 0; line-height: 1.7; }
     padding: 4px;
     margin-bottom: 10px;
   }
+}
+
+.cocurricular-page .page-hero-split .page-hero-image {
+  transform: translateY(-40px);
 }

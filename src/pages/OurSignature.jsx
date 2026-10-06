@@ -54,7 +54,7 @@ function OurSignature() {
 
           <div className="page-hero-image">
             <img
-              src="/images/mainimagerefined.webp"
+              src="/images/signature.webp"
               alt="Students of Africa Elite Schools"
             />
           </div>
