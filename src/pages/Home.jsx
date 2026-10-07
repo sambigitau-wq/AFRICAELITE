@@ -39,9 +39,11 @@ const slides = [
   { image: '/images/museumvisit.webp', tagline: 'Exposure visits', duration: 5000 },
   { image: '/images/Exposure3.webp', tagline: 'Exposure visits', duration: 5000 },
   { image: '/images/exposuretomountkenya.webp', tagline: 'Learning beyond the classroom – Adventure and Discovery', duration: 5000 },
+  {image : '/images/climbingmtkenya.webp', tagline : 'Climbing Mt Kenya adventure', duration :5000 },
+  { image: '/images/atoldmoses.webp', tagline: 'At the old Moses Camp - 3300 meters above sea level', duration: 5000 },
+  { image: '/images/img.webp', tagline: 'At the old Moses Camp - 3300 meters above sea level', duration: 5000 },
   { image: '/images/learnersatoldmosescamp.webp', tagline: 'Learning beyond the classroom – Adventure and Discovery', duration: 5000 },
-  { image: '/images/img.webp', tagline: 'Learning beyond the classroom – Adventure and Discovery', duration: 5000 },
-
+  
   { image: '/images/pp2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
   { image: '/images/pp2grad.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
   { image: '/images/pp2graduation2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
