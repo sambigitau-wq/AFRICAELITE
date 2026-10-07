@@ -438,7 +438,6 @@ p { margin: 0; line-height: 1.7; }
   padding: 0;
   min-height: 80px;
 }
-
 .hero-tagline {
   position: absolute;
   left: 0;
@@ -453,25 +452,28 @@ p { margin: 0; line-height: 1.7; }
   line-height: 1.25;
   letter-spacing: -0.01em;
   font-weight: 700;
-  color: #fff;
+  color: var(--maroon-deep);              /* ← maroon for normal slides */
   text-align: left;
   text-shadow:
-    0 2px 12px rgba(0, 0, 0, 1),
-    0 4px 28px rgba(0, 0, 0, 0.85);
+    0 0 8px rgba(255, 255, 255, 0.85),    /* ← white glow */
+    0 0 16px rgba(255, 255, 255, 0.6),
+    0 2px 4px rgba(255, 255, 255, 0.5);
   pointer-events: none;
 }
-
 .hero-tagline.active {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-
 .hero-tagline.brand-font {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.6rem, 4.2vw, 3.8rem);
   font-weight: 600;
   letter-spacing: 0.005em;
+  color: #fff;                            /* ← white — first slide only */
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 1),          /* ← dark shadow for contrast */
+    0 4px 28px rgba(0, 0, 0, 0.85);
 }
 
 .slide-arrow {
@@ -1258,7 +1260,7 @@ p { margin: 0; line-height: 1.7; }
 }
 .gallery-slider-content {
   position: absolute;
-  bottom: 90px;
+  bottom: 40px;
   left: 0;
   right: 0;
   z-index: 3;
@@ -1287,7 +1289,11 @@ p { margin: 0; line-height: 1.7; }
   line-height: 1.25;
   letter-spacing: -0.01em;
   font-weight: 700;
-  color: #fff;
+  color: var(--maroon-deep);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.85),
+    0 0 16px rgba(255, 255, 255, 0.6),
+    0 2px 4px rgba(255, 255, 255, 0.5);
   text-align: left !important;
   pointer-events: none;
 }

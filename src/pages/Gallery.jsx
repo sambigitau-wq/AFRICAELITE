@@ -16,7 +16,7 @@ const photos = [
   { image: '/images/kindergatenpresentation.webp', caption: 'We nurture creativity and authenticity' },
   { image: '/images/classinsession.webp', caption: 'We provide a friendly learning environment' },
   { image: '/images/computerclassinsession.webp', caption: 'We empower our learners with digital skills' },
-  { image: '/images/computerclassinsession3.webp', caption: 'Hands-on technology for a competitive market' },
+  { image: '/images/computerclassinsession2.webp', caption: 'Hands-on technology for a competitive market' },
   { image: '/images/dart.webp', caption: 'Fostering concentration, articulation and focus' },
   { image: '/images/studentsconfidentlypresenting.webp', caption: 'We build courage, nurture self-confidence and develop public speaking skills' },
   { image: '/images/studentsinteracting.webp', caption: 'We prepare our learners for the global market' },
@@ -34,7 +34,7 @@ const photos = [
   { image: '/images/learnersatoldmosescamp.webp', caption: 'Learning beyond the classroom — adventure and discovery' },
   { image: '/images/student.webp', caption: 'Every learner, a story of excellence' },
   { image: '/images/pp2.webp', caption: 'We nurture creativity, confidence, and excellence from an early age' },
-  { image: '/images/PP2INSESSION.webp', caption: 'We nurture creativity, confidence, and excellence from an early age' },
+  { image: '/images/classinsession3.webp', caption: 'We nurture creativity, confidence, and excellence from an early age' },
   { image: '/images/pp2graduation2.webp', caption: 'We nurture creativity, confidence, and excellence from an early age' },
   { image: '/images/israelinamusicfestivalaward.webp', caption: 'Talent developed, excellence celebrated' },
 ]
