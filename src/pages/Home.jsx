@@ -31,7 +31,7 @@ const slides = [
 
   { image: '/images/ballet.webp', tagline: 'Champions are never born; they are made', duration: 5000 },
   { image: '/images/ballletpresentation.webp', tagline: 'We identify and develop learners’ talents', duration: 5000 },
-  { image: '/images/performance1.webp', tagline: 'Indian dance in action', duration: 5000 },
+  { image: '/images/performance.webp', tagline: 'Indian dance in action', duration: 5000 },
   { image: '/images/culturaldance.webp', tagline: 'Confidence blossoms on every stage', duration: 5000 },
   { image: '/images/performance2.webp', tagline: 'Drama skills in action', duration: 5000 },
   { image: '/images/fashionshow.webp', tagline: 'We nurture creativity and confidence', duration: 5000 },
