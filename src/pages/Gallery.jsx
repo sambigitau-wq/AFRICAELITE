@@ -47,7 +47,7 @@ const photos = [
   { image: '/images/pp2.webp', caption: 'We nurture creativity, confidence, and excellence from an early age' },
   { image: '/images/pp2grad.webp', caption: 'Celebrating milestones and building bold futures' },
   { image: '/images/pp2graduation2.webp', caption: 'We nurture creativity, confidence, and excellence from an early age' },
-  { image: '/images/excellence.webp', caption: 'We develop talents and nurture excellence' },
+  { image: '/images/cocurricular.webp', caption: 'We develop talents and nurture excellence' },
 
   /* Gallery-only extras (kept to preserve your original selection) */
   { image: '/images/student.webp', caption: 'Every learner, a story of excellence' },
