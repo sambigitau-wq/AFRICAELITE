@@ -6,48 +6,48 @@ import Footer from '../components/Footer'
 const slides = [
   { image: '/images/mainimagerefined.webp', tagline: 'Transforming Learners into Achievers, Leaders & Agents of Change', duration: 9000, brandFont: true, maroonTop: true },
 
-  { image: '/images/classinsession.webp', tagline: 'We provide a child-friendly learning environment.', duration: 5000 },
+  { image: '/images/classinsession.webp', tagline: 'We provide a friendly learning environment', duration: 5000 },
   { image: '/images/classinsession3.webp', tagline: 'Learning session in progress', duration: 5000 },
-  { image: '/images/computerclassinsession.webp', tagline: 'We empower our learners with digital knowledge', duration: 5000 },
-  { image: '/images/computerclassinsession2.webp', tagline: 'We empower our learners with digital knowledge', duration: 5000 },
+  { image: '/images/computerclassinsession.webp', tagline: 'We empower our learners with digital skills', duration: 5000 },
+  { image: '/images/computerclassinsession2.webp', tagline: 'Hands-on technology for a competitive market', duration: 5000 },
   { image: '/images/kindergatenpresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
   { image: '/images/learnerspresenting.webp', tagline: "Learners' presentation in progress", duration: 5000 },
   { image: '/images/learnerspresenting2.webp', tagline: "Learners' presentation in progress", duration: 5000 },
-  { image: '/images/studentsconfidentlypresenting.webp', tagline: 'We nurture courage, self-confidence and public speaking skills', duration: 5000 },
-  { image: '/images/mentorship.webp', tagline: 'Guiding and counselling session in progress', duration: 5000, contain: true },
-  { image: '/images/presidentaddressingtheschool.webp', tagline: 'We develop public speaking skills', duration: 5000 },
+  { image: '/images/studentsconfidentlypresenting.webp', tagline: 'We build courage, nurture self-confidence and develop public speaking skills', duration: 5000 },
+  { image: '/images/mentorship.webp', tagline: 'We guide and counsel our learners', duration: 5000, contain: true },
+  { image: '/images/presidentaddressingtheschool.webp', tagline: 'We mentor leadership', duration: 5000 },
 
-  { image: '/images/chess.webp', tagline: 'We empower our learners with sharp critical and problem-solving skills', duration: 5000 },
-  { image: '/images/dart.webp', tagline: 'We nurture concentration, articulation and focus', duration: 5000 },
-  { image: '/images/taekwondo.webp', tagline: 'We equip our learners with self-defense skills', duration: 5000 },
-  { image: '/images/swimming.webp', tagline: 'Fun time moments', duration: 5000 },
-  { image: '/images/studentsinteracting.webp', tagline: 'We pride in grooming our learners', duration: 5000 },
-  { image: '/images/grooming.webp', tagline: 'We pride in grooming our learners', duration: 5000 },
-  { image: '/images/grooming2.webp', tagline: 'We pride in grooming our learners', duration: 5000 },
+  { image: '/images/chess.webp', tagline: 'We build excellence out of our learners', duration: 5000 },
+  { image: '/images/dart.webp', tagline: 'Fostering concentration, articulation and focus', duration: 5000 },
+  { image: '/images/taekwondo.webp', tagline: 'We equip our learners with self-defence skills', duration: 5000 },
+  { image: '/images/swimming.webp', tagline: 'Fun, outside classroom walls', duration: 5000 },
+  { image: '/images/studentsinteracting.webp', tagline: 'We prepare our learners for the global market', duration: 5000 },
+  { image: '/images/grooming.webp', tagline: 'We groom physically, we build character, we nurture confidence', duration: 5000 },
+  { image: '/images/grooming2.webp', tagline: 'We groom physically, we build character, we nurture confidence', duration: 5000 },
 
-  { image: '/images/musiclassongoing.webp', tagline: 'Music lesson in progress', duration: 5000 },
-  { image: '/images/studentsplayingtrumpets.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
+  { image: '/images/musiclassongoing.webp', tagline: 'We train diverse musical instruments', duration: 5000 },
+  { image: '/images/studentsplayingtrumpets.webp', tagline: 'Talent identified, nurtured and polished', duration: 5000 },
   { image: '/images/trumpets2.webp', tagline: 'We identify, grow and polish talents', duration: 5000 },
 
-  { image: '/images/ballet.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
-  { image: '/images/ballletpresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
-  { image: '/images/culturaldancepresentation.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
-  { image: '/images/performance.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
-  { image: '/images/performance2.webp', tagline: 'We nurture creativity and authenticity', duration: 5000 },
-  { image: '/images/fashionshow.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
+  { image: '/images/ballet.webp', tagline: 'Champions are never born; they are made', duration: 5000 },
+  { image: '/images/ballletpresentation.webp', tagline: 'We identify and develop learners’ talents', duration: 5000 },
+  { image: '/images/culturaldancepresentation.webp', tagline: 'Indian dance in action', duration: 5000 },
+  { image: '/images/performance.webp', tagline: 'Confidence blossoms on every stage', duration: 5000 },
+  { image: '/images/performance2.webp', tagline: 'Drama skills in action', duration: 5000 },
+  { image: '/images/fashionshow.webp', tagline: 'We nurture creativity and confidence', duration: 5000 },
 
-  { image: '/images/museumvisit.webp', tagline: 'Exposure visits', duration: 5000 },
-  { image: '/images/Exposure3.webp', tagline: 'Exposure visits', duration: 5000 },
-  { image: '/images/exposuretomountkenya.webp', tagline: 'Learning beyond the classroom – Adventure and Discovery', duration: 5000 },
-  {image : '/images/climbingmtkenya.webp', tagline : 'Climbing Mt Kenya adventure', duration :5000 },
+  { image: '/images/museumvisit.webp', tagline: 'Broadening horizons through exposure visits', duration: 5000 },
+  { image: '/images/Exposure3.webp', tagline: 'Learning through exposure visits', duration: 5000 },
+  { image: '/images/exposuretomountkenya.webp', tagline: 'Learning beyond the classroom — adventure and discovery', duration: 5000 },
+  { image: '/images/climbingmtkenya.webp', tagline: 'Climbing Mt Kenya adventure', duration: 5000 },
   { image: '/images/atoldmoses.webp', tagline: 'At the old Moses Camp - 3300 meters above sea level', duration: 5000 },
   { image: '/images/img.webp', tagline: 'At the old Moses Camp - 3300 meters above sea level', duration: 5000 },
-  { image: '/images/learnersatoldmosescamp.webp', tagline: 'Learning beyond the classroom – Adventure and Discovery', duration: 5000 },
-  
-  { image: '/images/pp2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
-  { image: '/images/pp2grad.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
-  { image: '/images/pp2graduation2.webp', tagline: 'We nurture creativity and build confidence', duration: 5000 },
-  { image: '/images/excellence.webp', tagline: 'We develop talents and nurture excellence ', duration: 5000 },
+  { image: '/images/learnersatoldmosescamp.webp', tagline: 'Learning beyond the classroom — adventure and discovery', duration: 5000 },
+
+  { image: '/images/pp2.webp', tagline: 'We nurture creativity, confidence, and excellence from an early age', duration: 5000 },
+  { image: '/images/pp2grad.webp', tagline: 'Celebrating milestones and building bold futures', duration: 5000 },
+  { image: '/images/pp2graduation2.webp', tagline: 'We nurture creativity, confidence, and excellence from an early age', duration: 5000 },
+  { image: '/images/excellence.webp', tagline: 'We develop talents and nurture excellence', duration: 5000 },
 ]
 
 function Home() {
@@ -101,14 +101,12 @@ function Home() {
                     </div>
                   ) : slide.contain ? (
                     <>
-                      {/* Blurred backdrop — same image, scaled + blurred */}
                       <img
                         src={slide.image}
                         alt=""
                         className="slide-image-backdrop"
                         aria-hidden="true"
                       />
-                      {/* Sharp, fully-visible image on top */}
                       <img
                         src={slide.image}
                         alt=""
