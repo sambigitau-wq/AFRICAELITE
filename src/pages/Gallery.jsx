@@ -31,7 +31,7 @@ const photos = [
 
   { image: '/images/ballet.webp', caption: 'Champions are never born; they are made' },
   { image: '/images/ballletpresentation.webp', caption: 'We identify and develop learners’ talents' },
-  { image: '/images/performance.webp', caption: 'Indian dance in action' },
+  { image: '/images/performance1.webp', caption: 'Indian dance in action' },
   { image: '/imagesculturaldancepresentation.webp', caption: 'Confidence blossoms on every stage' },
   { image: '/images/performance2.webp', caption: 'Drama skills in action' },
   { image: '/images/fashionshow.webp', caption: 'We nurture creativity and confidence' },
