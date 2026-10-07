@@ -2484,11 +2484,9 @@ p { margin: 0; line-height: 1.7; }
     object-fit: contain !important;
   }
 }
-
-/* ===== ADMISSION FORM STYLES ===== */
 .admission-page {
   background: #f4f6f8;
-  padding: 40px 15px;
+  padding:80px 15px 40px;   /* ← reduced from 160px */
   min-height: 100vh;
 }
 
@@ -2632,12 +2630,11 @@ p { margin: 0; line-height: 1.7; }
 
 .status-box.success { background: #e0f4e5; color: #1a7a3c; }
 .status-box.error   { background: #fbe3e3; color: #b02020; }
-
 @media (max-width: 700px) {
-  .admission-container { padding: 25px 18px; }
-  .admission-header h1 { font-size: 20px; }
+  .admission-page {
+    padding: 100px 15px 40px;  /* ← smaller on mobile */
+  }
 }
-
 /* ===== APPLY NOW TOPBAR BUTTON ===== */
 .topbar-cta {
   background: #1a3a6b;

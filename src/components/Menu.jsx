@@ -20,9 +20,9 @@ function Menu() {
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
 
-  // Force the dark topbar on pages with a light background
-  const forceDarkTopbar = location.pathname === '/previous-academics'
-
+const forceDarkTopbar =
+  location.pathname === '/previous-academics' ||
+  location.pathname === '/admission'
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
     onScroll()
