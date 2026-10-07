@@ -21,7 +21,7 @@ const slides = [
   { image: '/images/dart.webp', tagline: 'Fostering concentration, articulation and focus', duration: 5000 },
   { image: '/images/taekwondo.webp', tagline: 'We equip our learners with self-defence skills', duration: 5000 },
   { image: '/images/swimming.webp', tagline: 'Fun, outside classroom walls', duration: 5000 },
-  { image: '/images/studentsinteracting.webp', tagline: 'We prepare our learners for the global market', duration: 5000 },
+  { image: '/images/studentsinteracting.webp', tagline: 'Our brand, Our identity', duration: 5000 },
   { image: '/images/grooming.webp', tagline: 'We groom , we build character, we nurture confidence', duration: 5000 },
   { image: '/images/grooming2.webp', tagline: 'We groom , we build character, we nurture confidence', duration: 5000 },
 

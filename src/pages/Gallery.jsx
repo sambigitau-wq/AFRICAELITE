@@ -21,7 +21,7 @@ const photos = [
   { image: '/images/dart.webp', caption: 'Fostering concentration, articulation and focus' },
   { image: '/images/taekwondo.webp', caption: 'We equip our learners with self-defence skills' },
   { image: '/images/swimming.webp', caption: 'Fun, outside classroom walls' },
-  { image: '/images/studentsinteracting.webp', caption: 'We prepare our learners for the global market' },
+  { image: '/images/studentsinteracting.webp', caption: 'Our brand, Our identity' },
   { image: '/images/grooming.webp', caption: 'We groom, we build character, we nurture confidence' },
   { image: '/images/grooming2.webp', caption: 'We groom, we build character, we nurture confidence' },
 
