@@ -22,8 +22,8 @@ const slides = [
   { image: '/images/taekwondo.webp', tagline: 'We equip our learners with self-defence skills', duration: 5000 },
   { image: '/images/swimming.webp', tagline: 'Fun, outside classroom walls', duration: 5000 },
   { image: '/images/studentsinteracting.webp', tagline: 'We prepare our learners for the global market', duration: 5000 },
-  { image: '/images/grooming.webp', tagline: 'We groom physically, we build character, we nurture confidence', duration: 5000 },
-  { image: '/images/grooming2.webp', tagline: 'We groom physically, we build character, we nurture confidence', duration: 5000 },
+  { image: '/images/grooming.webp', tagline: 'We groom , we build character, we nurture confidence', duration: 5000 },
+  { image: '/images/grooming2.webp', tagline: 'We groom , we build character, we nurture confidence', duration: 5000 },
 
   { image: '/images/musiclassongoing.webp', tagline: 'We train diverse musical instruments', duration: 5000 },
   { image: '/images/studentsplayingtrumpets.webp', tagline: 'Talent identified, nurtured and polished', duration: 5000 },

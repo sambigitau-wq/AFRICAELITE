@@ -22,8 +22,8 @@ const photos = [
   { image: '/images/taekwondo.webp', caption: 'We equip our learners with self-defence skills' },
   { image: '/images/swimming.webp', caption: 'Fun, outside classroom walls' },
   { image: '/images/studentsinteracting.webp', caption: 'We prepare our learners for the global market' },
-  { image: '/images/grooming.webp', caption: 'We groom physically, we build character, we nurture confidence' },
-  { image: '/images/grooming2.webp', caption: 'We groom physically, we build character, we nurture confidence' },
+  { image: '/images/grooming.webp', caption: 'We groom, we build character, we nurture confidence' },
+  { image: '/images/grooming2.webp', caption: 'We groom, we build character, we nurture confidence' },
 
   { image: '/images/musiclassongoing.webp', caption: 'We train diverse musical instruments' },
   { image: '/images/studentsplayingtrumpets.webp', caption: 'Talent identified, nurtured and polished' },
