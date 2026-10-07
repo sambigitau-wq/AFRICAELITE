@@ -46,7 +46,7 @@ const slides = [
 
   { image: '/images/pp2.webp', tagline: 'We nurture creativity, confidence, and excellence from an early age', duration: 5000 },
   { image: '/images/pp2grad.webp', tagline: 'Celebrating milestones and building bold futures', duration: 5000 },
-  { image: '/images/pp2graduation2.webp', tagline: 'We nurture creativity, confidence, and excellence from an early age', duration: 5000 },
+  { image: '/images/pp2graduation2.webp', tagline: 'Sky will never be the limit when there are footprints on the moon', duration: 5000 },
   { image: '/images/cocurricular.webp', tagline: 'We develop talents and nurture excellence', duration: 5000 },
 ]
 
