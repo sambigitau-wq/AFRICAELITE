@@ -137,27 +137,27 @@ const Admission = () => {
               </div>
             </div>
 
-            {/* FATHER / GUARDIAN */}
-            <h3 className="section-heading">Father's / Guardian's Details</h3>
+            {/* PARENT / GUARDIAN */}
+            <h3 className="section-heading">Parent's / Guardian's Details</h3>
 
             <div className="row">
               <div className="field">
-                <label>Father's Name</label>
-                <input type="text" name="father_name" required />
+                <label>Parent's / Guardian's Name</label>
+                <input type="text" name="parent_full_name" required />
               </div>
             </div>
 
             <div className="row">
               <div className="field">
                 <label>Telephone (Office)</label>
-                <input type="tel" name="father_phone_office" />
+                <input type="tel" name="parent_phone_office" />
               </div>
             </div>
 
             <div className="row">
               <div className="field">
                 <label>Email</label>
-                <input type="email" name="father_email" required />
+                <input type="email" name="parent_email" required />
               </div>
             </div>
 
