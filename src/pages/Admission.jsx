@@ -16,10 +16,10 @@ const Admission = () => {
 
     emailjs
       .sendForm(
-        "service_3nzm19d",     // ✅ Your Service ID
-        "template_utsgk9v",    // ✅ Your Template ID
+        "service_3nzm19d",
+        "template_utsgk9v",
         formRef.current,
-        "uo4tkay-QnOQmXvEW"    // ✅ Your Public Key
+        "uo4tkay-QnOQmXvEW"
       )
       .then(() => {
         setStatus({
@@ -65,7 +65,7 @@ const Admission = () => {
 
             <div className="row">
               <div className="field">
-                <label>Date of Admission</label>
+                <label>Intended Admission Date</label>
                 <input type="date" name="date_of_admission" required />
               </div>
               <div className="field">
@@ -117,7 +117,7 @@ const Admission = () => {
 
             <div className="row">
               <div className="field">
-                <label>Grade / Class</label>
+                <label>Grade Applying For</label>
                 <input type="text" name="grade_class" />
               </div>
               <div className="field">
@@ -137,35 +137,13 @@ const Admission = () => {
               </div>
             </div>
 
-            <div className="row">
-              <div className="field">
-                <label>Any Personal Doctor</label>
-                <input type="text" name="personal_doctor" />
-              </div>
-              <div className="field">
-                <label>Any Insurance Cover</label>
-                <input type="text" name="insurance_cover" />
-              </div>
-            </div>
-
-            {/* FATHER */}
+            {/* FATHER / GUARDIAN */}
             <h3 className="section-heading">Father's / Guardian's Details</h3>
 
             <div className="row">
               <div className="field">
                 <label>Father's Name</label>
                 <input type="text" name="father_name" required />
-              </div>
-              <div className="field">
-                <label>ID No.</label>
-                <input type="text" name="father_id" />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="field">
-                <label>Occupation</label>
-                <input type="text" name="father_occupation" />
               </div>
             </div>
 
@@ -174,91 +152,12 @@ const Admission = () => {
                 <label>Telephone (Office)</label>
                 <input type="tel" name="father_phone_office" />
               </div>
-              <div className="field">
-                <label>Telephone (Home)</label>
-                <input type="tel" name="father_phone_home" />
-              </div>
             </div>
 
             <div className="row">
               <div className="field">
                 <label>Email</label>
                 <input type="email" name="father_email" required />
-              </div>
-            </div>
-
-            {/* MOTHER */}
-            <h3 className="section-heading">Mother's Details</h3>
-
-            <div className="row">
-              <div className="field">
-                <label>Mother's Name</label>
-                <input type="text" name="mother_name" />
-              </div>
-              <div className="field">
-                <label>ID No.</label>
-                <input type="text" name="mother_id" />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="field">
-                <label>Occupation</label>
-                <input type="text" name="mother_occupation" />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="field">
-                <label>Telephone (Office)</label>
-                <input type="tel" name="mother_phone_office" />
-              </div>
-              <div className="field">
-                <label>Telephone (Home)</label>
-                <input type="tel" name="mother_phone_home" />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="field">
-                <label>Email</label>
-                <input type="email" name="mother_email" />
-              </div>
-            </div>
-
-            {/* NEXT OF KIN */}
-            <h3 className="section-heading">Next of Kin</h3>
-
-            <div className="row">
-              <div className="field">
-                <label>Next of Kin Name</label>
-                <input type="text" name="kin_name" />
-              </div>
-              <div className="field">
-                <label>Relationship</label>
-                <input type="text" name="kin_relationship" />
-              </div>
-              <div className="field">
-                <label>ID No.</label>
-                <input type="text" name="kin_id" />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="field">
-                <label>Telephone (Office)</label>
-                <input type="tel" name="kin_phone_office" />
-              </div>
-              <div className="field">
-                <label>Telephone (Home)</label>
-                <input type="tel" name="kin_phone_home" />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="field">
-                <label>Email</label>
-                <input type="email" name="kin_email" />
               </div>
             </div>
 
